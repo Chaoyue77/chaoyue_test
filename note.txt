@@ -1,4 +1,4 @@
-SASS：
+﻿SASS：
 	https://www.sass.hk/
 	CSS 预处理器：SASS、LESS
 
@@ -20,43 +20,10 @@ SASS：
 		b. 变量
 		c. 嵌套
 		d. 导入
-			css有一个特别不常用的特性，即@import规则，它允许在一个css文件中导入其他css文件。
-		e. 注释
-		f. 混合器
-			可以通过sass的混合器实现大段样式的重用。
-			@mixin 混合名称(参数) {
-				// 复用的大段样式代码
-			}
-
-			@include 混合器名称(参数)
-		g. 继承
-			@extend 选择器名称;
-		h. 流程控制语句
-			@if 条件 { 条件满足 } @else { 条件不满足 }
-			@for $var from start through/to end
-		i. 函数
-			@function 函数名(参数) {
-				// 函数主体
-				// @return 返回值;
-			}
+			css有一个特别不常用的特性，即@import规则，它允许在一个css文件中导入
 
 
 GULP：
-	https://www.gulpjs.com.cn/
-
-	http://www.ydcss.com/archives/18
-
-	gulp是基于Nodejs的自动任务运行器， 她能自动化地完成 javascript/coffee/sass/less/html/image/css 等文件的的测试、检查、合并、压缩、格式化、浏览器自动刷新、部署文件生成，并监听文件在改动后重复指定的这些步骤。
-
-	使用步骤：
-		安装nodejs -> 全局安装gulp -> 项目安装gulp以及gulp插件 -> 配置gulpfile.js -> 运行任务
-
-		a. 安装 NodeJS
-			node -v
-			npm -v
-			使用 npm 安装包：
-				npm install <name> [-g] [--save-dev]
-		b. 选装 cnpm
 			npm install -g cnpm --registry=https://registry.npm.taobao.org
 
 			安装包：
@@ -69,39 +36,4 @@ GULP：
 		d. 在项目目录下生成 package.json 文件：
 			在命令提示符下进入项目目录，然后执行：
 				cnpm init
-				可以一路回车生成 package.json 文件
-		e. 在项目目录下本地安装 gulp：
-			cnpm install gulp --save-dev
-			本地安装的资源都放在 node_modules 文件夹下
-		f. 项目本地安装 gulp 插件()：
-			压缩CSS插件：
-				gulp-clean-css
-				cnpm install gulp-clean-css --save-dev
-			压缩JS：
-				gulp-uglify
-				cnpm install --save-dev gulp-uglify
-			HTML压缩：
-				gulp-htmlmin
-				cnpm install --save-dev gulp-htmlmin
-			SASS编译：
-				gulp-sass
-				cnpm i gulp-sass --save-dev
-				(可能还需要安装 node-sass )
-			自动刷新：
-				gulp-livereload
-			web服务器
-				gulp-connect(内置有 livereload 功能)
-				
-		g. 配置 gulpfile.js 文件
-			// 引入使用到的模块
-			let gulp = require("gulp"),
-				minifyCss = require("gulp-clean-css");
-
-			// 定义 gulp 任务
-			gulp.task("css", function(){
-				gulp.src("css/*.css")
-					.pipe(minifyCss())
-					.pipe(gulp.dest("dist/css"));
-			});
-		h. 执行任务，在命令提示符下执行：
-			gulp 任务名称
+		
